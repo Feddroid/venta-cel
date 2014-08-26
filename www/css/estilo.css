@@ -1,0 +1,586 @@
+/*ISCROLLER*/
+#wrapper {
+  z-index:1;
+  top:0px;
+  bottom:0px;
+  left:0px;
+  right:0px;
+  overflow:auto;
+}
+
+.scroller {
+  -webkit-tap-highlight-color:rgba(0,0,0,0);
+  width:100%;
+  padding:0;
+}
+/*FIN ISCROLLER*/
+/*CAMBIOS DEL SISTEMA*/
+
+.atras_btn{
+  display: inline-block;
+  font-size: 25px;
+  margin-top: 6px;
+  vertical-align: top;
+}
+
+.btn_back{
+  background: none;
+  border-radius: 0;
+  width: 80px;
+  height: 33px;
+  box-shadow: none !important;
+  text-align: left;
+  font-family: ProximaNova, sans-serif;
+  border: 0;
+}
+
+.btn_back span.ui-btn-inner{
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+}
+
+.btn_back span.ui-btn-inner label{
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.ui-input-text.ui-focus{
+  box-shadow: none;
+  border-bottom: 1px solid #DF2047;
+}
+
+.ui-input-text{
+  background: none;
+  border: none;
+  box-shadow: none;
+  border-bottom: 1px solid black;
+  padding: 0 !important;
+  margin: 5px 0 0 0 !important;
+  border-radius: 0;
+  border-bottom: 1px solid #CCC;
+}
+
+::-webkit-input-placeholder {
+   color: #4d4d4d;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: #4d4d4d;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: #4d4d4d;  
+}
+
+:-ms-input-placeholder {  
+   color: #4d4d4d;  
+}
+
+/*FIN CAMBIOS DEL SISTEMA*/
+
+/*conetedor ventas*/
+
+.fase_tit  div span.ui-btn-inner, .fase_tit  div div span.ui-btn-inner {
+  font-size: 13px;
+  height: 24px;
+  padding: 10px 0 0 0;
+  background: #5e5e5e;
+  text-shadow: none;
+  color: white;
+  font-family: ProximaNovaLight, sans-serif;
+}
+
+
+
+.popup_Nusu, .popup_Nusu_n{
+  width: 100%;
+  position: absolute;
+  background: black;
+  text-align: center;
+}
+
+.popup_Nusu{
+  background: none;
+}
+
+.popup_Nusu_n{
+  opacity: 0.7;
+}
+
+.cont_pupup_Nusu{
+  width: 84%;
+  height: 84%;
+  margin-top: 10%;
+  display: inline-block;
+  background: white;
+}
+
+.cont_req{
+  width: 90%;
+  display: inline-block;
+  text-align: left;
+  margin-top: 20px;
+}
+
+.cont_req label{
+  display: inline-block;
+  width: 100%;
+  font-size: 13px;
+  color: #a9a9a9;
+  font: 13px ProximaNova, sans-serif;
+}
+
+.cont_req input{
+  font: 16px ProximaNova, sans-serif;
+  padding: 0 !important;
+  color: #4d4d4d;
+}
+
+.cont_items{
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  font-size: 0;
+}
+
+.fase_tit{
+  display: inline-block;
+  width: 93%;
+  height: 34px;
+  /*height: 8.5%;
+  min-height: 34px;
+  max-height: 34px;
+  height: 34px;*/
+  background: #afafaf;
+  margin: 7px 0;
+}
+
+.cont_item_lst{
+
+}
+
+.unid_cont_item{
+  display: inline-block;
+  background: white;
+  width: 92.8%;
+  max-width: 93%;
+  height: 50px;
+  border: 1px solid #f2f2f2;
+  box-shadow: 0px 2px 1px #c7c7c7;
+  margin-bottom: 7px;
+}
+
+.sect_uno_item{
+  display: inline-block;
+  width: 85%;
+  height: 100%;
+  vertical-align: top;
+  font-family: ProximaNovaLight, sans-serif;
+  text-align: left;
+}
+
+.nom_emp_item{
+  display: inline-block;
+  width: 95%;
+  margin-left: 5%;
+  height: 40%;
+  overflow: hidden;
+  font-size: 16px;
+  padding: 10px 0 0 0;
+  color: #5e5e5e;
+  }
+
+.valor_emp_item{
+  display: inline-block;
+  width: 95%;
+  height: 25%;
+  overflow: hidden;
+  margin-left: 5%;
+  font-size: 12px;
+  color: #7b7b7b;
+}
+
+.sect_dos_item{
+  display: inline-block;
+  width: 15%;
+  height: 100%;
+  vertical-align: top;
+}
+
+.btn_opc_item{
+  display: inline-block;
+  width: 25px;
+  height: 21px;
+  margin-top: 14px;
+  font-size: 17px;
+  padding-top: 4px;
+  border-radius: 70px;
+  background: #4a4a4a;
+  color: white;
+  cursor: pointer;
+  }
+/*fon contenedor ventas*/
+
+/*CONTENEDOR CUERPO*/
+
+.cont_main{
+  background: #e5e5e5;
+  padding: 0;
+  width: 100%;
+}
+
+/*FIN CONTENEDOR CUERPO*/
+
+/* BOTONES DE NAVEGACIÓN CABECERA Y PIE*/
+
+.ui-btn-inner{
+  border: 0;
+}
+#cont_cab_nav{
+  width: 100%;
+  background: #b01a3c;
+}
+
+#cont_cab_nav div{
+  font-size: 20px;
+  color: #490d1a;
+}
+
+
+#cont_cab_nav label{
+  font: 8px ProximaNova, sans-serif;
+  display: inline-block;
+}
+
+#cont_cab_nav li a{
+  border: 0;
+  margin: 0;
+  background: #b01a3c;
+  text-shadow: 0 1px 0 #490d1a;
+  height: 50px;
+}
+
+#cont_cab_nav li a span{
+  padding: 8px 0 7px 0;
+}
+
+.cab_nav{
+  background: #80172d;
+  height: 93px;
+  max-height: 93px;
+  min-height: 93px;
+  margin: 0;
+  padding: 0;
+  border: 0 !important;
+  top: 0;
+  width: 100%;
+}
+
+.cab_nav div h1{
+  display: inline-block;
+  float: right;
+  vertical-align: middle;
+  margin: 9px 10px 9px 0;
+  width: 60%;
+  height: 25px;
+  text-align: right;
+  font: 20px ProximaNova, sans-serif;
+  overflow: hidden;
+}
+
+.cab_nav div.con_cab_a{
+  height: 43px;
+  max-height: 43px;
+  margin: 0;
+}
+
+#cont_pie_nav li a{
+  border: 0;
+  margin: 0;
+  background: #df2047;
+  text-shadow: 0 1px 0 #490d1a;
+  height: 35px;
+}
+
+#cont_pie_nav li a label{
+  font: 13px ProximaNovaSemibold, sans-serif;
+  text-shadow: none;
+}
+
+.pie{
+  border: none;
+  background: #df2047;
+}
+
+.ui-fixed-hidden{
+  position: fixed;
+}
+
+/* FIN BOTONES DE NAVEGACIÓN CABECERA Y PIE*/
+
+/*FORMULARIO LOGIN*/
+
+#onOf{
+  background: chartreuse;
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  top: 5px;
+  left: 5px;
+  cursor: pointer;
+}
+
+.login_caja{
+  width: 230px;
+  height: 24px;
+  background: white;
+  padding: 2px 3% 6px 3%;
+  /*margin-bottom: 10px;
+  margin-right: 0;*/
+  margin: 0 8% 10px 8%;
+  border: 1px solid #dddddd;
+  border-radius: 3px;
+  display: inline-block;
+}
+
+.login_caja div{
+  border:none;
+}
+
+.login_caja div input{
+  font: 13px ProximaNova, sans-serif;
+}
+
+.login_caja div:hover{
+  border:none;
+}
+
+#btn_login{
+  border: 1px solid #d3183e;
+  background: #ff1848;
+  text-shadow: none;
+  font: 13px ProximaNovaLight, sans-serif;
+  border-radius: 3px;
+  margin: 0;
+}
+
+#inicio{
+  background-image: url('../img/fondo.jpg');
+  background-size: 100% 100%;
+  text-align: center;
+}
+
+.center-button{
+  margin: 0 auto;
+}
+
+.center-wrapper{
+  text-align: center;
+}
+
+.menError{
+  background: rgb(88, 122, 160);
+  display: block;
+  font-family: arial;
+  color: white;
+  text-align: center;
+  padding: 3px 10px;
+  position: absolute;
+  font-size: 15px;
+  text-shadow: none;
+}
+/*FIN FORMULARIO LOGIN*/
+
+
+
+/* FIN BOTONES DE NAVEGACIÓN CABECERA*/
+
+
+
+
+/*--CARGANDO CSS-*/
+
+.main {
+    display: none;
+    font-family: "Lato", Calibri, Arial, sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+    height: 60px;
+    margin: 0 auto;
+    margin-top: 15px;
+    position: relative;
+    color: #1A9CFF;
+    -webkit-font-smoothing: antialiased;
+}
+
+.bar {
+  font-size: 15px;
+  width: 200px;
+  height: 8px;
+  position: relative;
+  background: #650619;
+  box-shadow: 0 0 0 .05em #7A1529, 0 0 0 .18em #7A1529, inset 0 .1em .05em rgba(0,0,0,0.1), 0 .05em rgba(255,255,255,0.7);      
+}
+
+.bar .sphere {
+    width: 5px;
+  height: 100%;
+  background: -webkit-linear-gradient(#eee, #ddd);
+  background: -moz-linear-gradient(#eee, #ddd);
+  background: -ms-linear-gradient(#eee, #ddd);
+  background: -o-linear-gradient(#eee, #ddd);
+  background: linear-gradient(#ff1848, #d3183e);
+  box-shadow: inset 0 .15em .1em rgba(255,255,255,0.3), inset 0 -.1em .15em rgba(0,0,0,0.15), 0 0 .25em rgba(0,0,0,0.3);
+  display: block;
+  -webkit-animation: slide 1.75s ease-in-out infinite alternate;
+  -moz-animation: slide 1.75s ease-in-out infinite alternate;
+  -ms-animation: slide 1.75s ease-in-out infinite alternate;
+  -o-animation: slide 1.75s ease-in-out infinite alternate;
+  animation: slide 1.75s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes slide {
+    to { margin-left: 90%; }
+}
+
+@-moz-keyframes slide {
+    to { margin-left: 90%; }
+}
+
+@-ms-keyframes slide {
+    to { margin-left: 90%; }
+}
+
+@-o-keyframes slide {
+    to { margin-left: 90%; }
+}
+
+@keyframes slide {
+    to { margin-left: 90%; }
+}
+/*FIN CARGANDO*/
+
+/*FONTS ICONOS CSS*/
+@font-face {
+  font-family: 'icomoon';
+  src:url('fonts/icomoon.eot?-pspnsd');
+  src:url('fonts/icomoon.eot?#iefix-pspnsd') format('embedded-opentype'),
+    url('fonts/icomoon.woff?-pspnsd') format('woff'),
+    url('fonts/icomoon.ttf?-pspnsd') format('truetype'),
+    url('fonts/icomoon.svg?-pspnsd#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-office:before {
+  content: "\e600";
+}
+.icon-pencil:before {
+  content: "\e601";
+}
+.icon-address-book:before {
+  content: "\e602";
+}
+.icon-calendar:before {
+  content: "\e603";
+}
+.icon-pie:before {
+  content: "\e604";
+}
+.icon-star:before {
+  content: "\e605";
+}
+.icon-plus:before {
+  content: "\e606";
+}
+.icon-arrow-down:before {
+  content: "\e607";
+}
+.icon-arrow-left:before {
+  content: "\e608";
+}
+.icon-arrow-down2:before {
+  content: "\e609";
+}
+.icon-arrow-left2:before {
+  content: "\e60a";
+}
+.icon-arrow-down3:before {
+  content: "\e60b";
+}
+
+/*FIN FONTS ICONOS CSS*/
+
+/* INICIO CAMBIAR PAGINA TOUCHSLIDER*/
+/*.gallery {width: 100%;overflow: hidden;}
+.gallery div.holder {width: 100%;position: relative;overflow: hidden;}
+.gallery div.list {margin: 0;padding: 0;list-style: none;width: 99999px;overflow: hidden;}
+.gallery div.item {float: left;}
+
+html, body {width: 100%;height: 100%;}
+body {margin: 0;padding: 0;font: 16px/22px Helvetica, Arial, sans-serif;color: #333;}
+a {color: #333;text-decoration: none;}
+#container {height: 100%;}
+#container div {display: block;height: 100%;}
+figure {height: 100%;display: block;margin: 0;text-align: center;vertical-align: middle;}
+#container div.item {vertical-align: middle;}
+img {max-height: 100%;max-width: 98%;vertical-align: top;border: 1px solid #FFF;-webkit-border-radius: 4px;-moz-border-radius: 4px;border-radius: 4px;}
+#container div.gallery {position: relative;}*/
+/*FIN CAMBIAR PAGINA TOUCHSLIDER*/
+
+
+/*FONTS*/
+@font-face {
+font-family: ProximaNova;
+src: url(font/ProximaNovaRegular.otf) format("truetype");
+}
+@font-face {
+font-family: ProximaNovaBold;
+src: url(font/ProximaNovaBold.otf) format("truetype");
+}
+@font-face {
+font-family: ProximaNovaExtrabold;
+src: url(font/ProximaNovaExtrabold.otf) format("truetype");
+}
+@font-face {
+font-family: ProximaNovaLight;
+src: url(font/ProximaNovaLight.otf) format("truetype");
+}
+@font-face {
+font-family: ProximaNovaLightItalic;
+src: url(font/ProximaNovaLightItalic.otf) format("truetype");
+}
+@font-face {
+font-family: ProximaNovaRegularItalic;
+src: url(font/ProximaNovaRegularItalic.otf) format("truetype");
+}
+@font-face {
+font-family: ProximaNovaSemibold;
+src: url(font/ProximaNovaSemibold.otf) format("truetype");
+}
+@font-face {
+font-family: ProximaNovaSemiboldItalic;
+src: url(font/ProximaNovaSemiboldItalic.otf) format("truetype");
+}
+@font-face {
+font-family: ProximaNovaThin;
+src: url(font/ProximaNovaThin.otf) format("truetype");
+}
+

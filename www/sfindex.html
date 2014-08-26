@@ -1,0 +1,860 @@
+<!DOCTYPE html> 
+<html>
+<head>
+  	<meta charset="UTF-8">
+  	<title>Ventas - Roinet</title>
+  	<meta name="viewport" content="user-scalable=no, maximum-scale=1, minimum-scale=1, user-scalable=no, initial-scale=1, width=device-width, height=device-height">
+  	<link rel="stylesheet" href="css/jquery.mobile-1.3.2.min.css" />
+  	<link rel="stylesheet" type="text/css" href="css/estilo.css" />
+    <link rel="stylesheet" type="text/css" href="css/estilo3.css" />
+    <script src="js/phonegap.js"></script>
+  	<script src="js/jquery.js"></script>
+  	<script src="js/jquery.mobile-1.3.2.min.js"></script>
+  	<script type="text/javascript" src="js/iscroll.js"></script>
+  	<script type="text/javascript" src="js/scroll.js"></script>
+  	<script type="text/javascript" src="js/accion.js"></script>
+  	<!--<script type="text/javascript" src="js/jquery.touchSlider.js"></script>-->
+</head>
+<body>
+	<section data-role="page" id="inicio" class="pagina">
+    <article data-role="content" style="font-size:0;">
+      <div id='onOf'></div>
+      <div style="display: inline-block; margin-bottom: 10px; width: 100%; margin-top: 35%;"><img src="img/logo.jpg"></div>
+      <div class="login_caja"><input type="email" id="mail" name="mail" value="" placeholder="Correo electrónico"></div>
+      <div class="login_caja"><input type="password" id="clave" name="clave" value="" placeholder="******"></div>
+      <div class="center-wrapper">
+        <div id="btn_login" data-role="button" data-theme="b" data-inline="true">INICIAR SESIÓN</div>
+      </div>
+      <div class="center-wrapper">
+        <section class="main">
+          <div class="bar">
+            <i class="sphere"></i>
+          </div>
+        </section>
+      </div>
+    </article>
+  </section>
+
+  <section data-role="page" id="venta">
+    <article data-role="header" id="d_usu" data-id="top_fijo" data-position="fixed" class="cab_nav">
+      <div class="con_cab_a"><h1>Ventas</h1></div>
+      <div data-role="navbar" data-grid="d" id="cont_cab_nav">
+        <ul>
+          <li><a href="javascript:;" style="border-bottom: 6px solid #490d1a; height: 44px;"><div class="icon-office"></div><label>VENTAS</label></a></li>
+          <li><a href="javascript:;" id="btn_actividad"><div class="icon-calendar"></div><label>ACTIVIDADES</label></a></li>
+          <li><a href="javascript:;" id='btn_contacto'><div class="icon-address-book"></div><label>CONTACTOS</label></a></li>
+          <li><a href="javascript:;"><div class="icon-pie"></div><label>ESTADISTICAS</label></a></li>
+          <li><a href="javascript:;"><div class="icon-star"></div><label>LOGROS</label></a></li>
+        </ul>
+      </div>
+    </article>
+    <article data-role="content" class="cont_main"> 
+      <section class='cont_items'>
+        <article class="fase_tit">
+          <div data-role="fieldcontain">
+            <select name="cboFase" id="cboFase"></select>
+          </div>
+        </article>
+        <section class='cont_item_lst'>
+          <div id="wrapper">
+            <div class="scroller">
+            </div>
+          </div>
+        </section>
+      </section>
+    </article>
+
+     <article data-role="footer" data-position="fixed" data-id="pie_fijo" data-theme="b" class="pie">
+        <div data-role="navbar" data-grid="b" id="cont_pie_nav">
+          <ul>
+            <li><a href="#venta" id="btn_venta_bot"><div class="icon-plus"> <label>Venta</label></div></a></li>
+            <li><a href="#contacto" id="btn_contacto_bot"><div class="icon-plus"> <label>Contacto</label></div></a></li>
+            <li><a href="#agenda" class="sin_r" id="btn_actividad_bot"><div class="icon-plus"> <label>Actividades</label></div></a></li>
+          </ul>
+      </div>
+    </article>
+  </section>
+
+  <section data-role="page" id="actividad">
+    <article data-role="header" id="d_usu" data-id="top_fijo" data-position="fixed" class="cab_nav">
+      <a href="#" data-rel="back" class="btn_back"><div class="icon-arrow-left atras_btn"></div><label>Atras</label></a>
+      <div class="con_cab_a"><h1>Actividades</h1></div>
+      <div data-role="navbar" data-grid="d" id="cont_cab_nav">
+        <ul>
+          <li><a href="javascript:;" id='btn_venta'><div class="icon-office"></div><label>VENTAS</label></a></li>
+          <li><a href="javascript:;" style="border-bottom: 6px solid #490d1a; height: 44px;"><div class="icon-calendar"></div><label>ACTIVIDADES</label></a></li>
+          <li><a href="javascript:;" id='btn_contacto'><div class="icon-address-book"></div><label>CONTACTOS</label></a></li>
+          <li><a href="javascript:;"><div class="icon-pie"></div><label>ESTADISTICAS</label></a></li>
+          <li><a href="javascript:;"><div class="icon-star"></div><label>LOGROS</label></a></li>
+        </ul>
+      </div>
+    </article>
+    <article data-role="content" class="cont_main"> 
+      <section class='cont_items'>
+
+        <article class="fase_tit fase_tit_sel_act">
+          <div data-role="fieldcontain" class="fieldcontain-background">
+            <select name="cboFase" id="cboFase">
+              <option value="volvo">Filtros</option>
+              <option value="volvo">Volvo22</option>
+              <option value="volvo">Volvo33</option>
+              <option value="volvo">Volvo14</option>
+            </select>
+          </div>
+        </article>
+
+      <section class="cont_item_lst" style="height: 463px;">
+          <div id="wrapper">
+            <!-- <div class="scroller2"> -->
+              <article class="unid_cont_item_act">
+                <section class="sect_uno_item_izq">
+                  <div class="div_fecha_act_top">Vie</div>
+                  <div class="div_fecha_act_bot">30 Ago</div>
+                </section>
+                <section class="sect_uno_item_mid">
+                  <div class="div_tipo_act_top">Reunión</div>
+                  <div class="div_tipo_act_bot">
+                    <div class="div_tipo_act_bot_izq">13:00 /</div>
+                    <div class="div_tipo_act_bot_der">Teléfonica del Perú</div>
+                  </div>
+                </section>
+                <section class="sect_uno_item_der"><input type="checkbox" name="act" value="actividad"></input></section>
+              </article>
+
+              <article class="unid_cont_item_act">
+                <section class="sect_uno_item_izq">
+                  <div class="div_fecha_act_top">Vie</div>
+                  <div class="div_fecha_act_bot">30 Ago</div>
+                </section>
+                <section class="sect_uno_item_mid">
+                  <div class="div_tipo_act_top">Reunión</div>
+                  <div class="div_tipo_act_bot">
+                    <div class="div_tipo_act_bot_izq">13:00 /</div>
+                    <div class="div_tipo_act_bot_der">Teléfonica del Perú</div>
+                  </div>
+                </section>
+                <section class="sect_uno_item_der"><input type="checkbox" name="act" value="actividad"></input></section>
+              </article>
+
+              <article class="unid_cont_item_act">
+                <section class="sect_uno_item_izq">
+                  <div class="div_fecha_act_top">Vie</div>
+                  <div class="div_fecha_act_bot">30 Ago</div>
+                </section>
+                <section class="sect_uno_item_mid">
+                  <div class="div_tipo_act_top">Reunión</div>
+                  <div class="div_tipo_act_bot">
+                    <div class="div_tipo_act_bot_izq">13:00 /</div>
+                    <div class="div_tipo_act_bot_der">Teléfonica del Perú</div>
+                  </div>
+                </section>
+                <section class="sect_uno_item_der"><input type="checkbox" name="act" value="actividad"></input></section>
+              </article>
+
+              <article class="unid_cont_item_act">
+                <section class="sect_uno_item_izq">
+                  <div class="div_fecha_act_top">Vie</div>
+                  <div class="div_fecha_act_bot">30 Ago</div>
+                </section>
+                <section class="sect_uno_item_mid">
+                  <div class="div_tipo_act_top">Reunión</div>
+                  <div class="div_tipo_act_bot">
+                    <div class="div_tipo_act_bot_izq">13:00 /</div>
+                    <div class="div_tipo_act_bot_der">Teléfonica del Perú</div>
+                  </div>
+                </section>
+                <section class="sect_uno_item_der"><input type="checkbox" name="act" value="actividad"></input></section>
+              </article>
+
+              <article class="unid_cont_item_act">
+                <section class="sect_uno_item_izq">
+                  <div class="div_fecha_act_top">Vie</div>
+                  <div class="div_fecha_act_bot">30 Ago</div>
+                </section>
+                <section class="sect_uno_item_mid">
+                  <div class="div_tipo_act_top">Reunión</div>
+                  <div class="div_tipo_act_bot">
+                    <div class="div_tipo_act_bot_izq">13:00 /</div>
+                    <div class="div_tipo_act_bot_der">Teléfonica del Perú</div>
+                  </div>
+                </section>
+                <section class="sect_uno_item_der"><input type="checkbox" name="act" value="actividad"></input></section>
+              </article>
+
+              <article class="unid_cont_item_act">
+                <section class="sect_uno_item_izq">
+                  <div class="div_fecha_act_top">Vie</div>
+                  <div class="div_fecha_act_bot">30 Ago</div>
+                </section>
+                <section class="sect_uno_item_mid">
+                  <div class="div_tipo_act_top">Reunión</div>
+                  <div class="div_tipo_act_bot">
+                    <div class="div_tipo_act_bot_izq">13:00 /</div>
+                    <div class="div_tipo_act_bot_der">Teléfonica del Perú</div>
+                  </div>
+                </section>
+                <section class="sect_uno_item_der"><input type="checkbox" name="act" value="actividad"></input></section>
+              </article>
+
+              <article class="unid_cont_item_act">
+                <section class="sect_uno_item_izq">
+                  <div class="div_fecha_act_top">Vie</div>
+                  <div class="div_fecha_act_bot">30 Ago</div>
+                </section>
+                <section class="sect_uno_item_mid">
+                  <div class="div_tipo_act_top">Reunión</div>
+                  <div class="div_tipo_act_bot">
+                    <div class="div_tipo_act_bot_izq">13:00 /</div>
+                    <div class="div_tipo_act_bot_der">Teléfonica del Perú</div>
+                  </div>
+                </section>
+                <section class="sect_uno_item_der"><input type="checkbox" name="act" value="actividad"></input></section>
+              </article>
+            <!-- </div> -->
+          </div>
+      </section>
+    </article>
+     <article data-role="footer" data-position="fixed" data-id="pie_fijo" data-theme="b" class="pie">
+        <div data-role="navbar" data-grid="b" id="cont_pie_nav">
+          <ul>
+            <li><a href="#venta" id="btn_venta_bot"><div class="icon-plus"> <label>Venta</label></div></a></li>
+            <li><a href="#contacto" id="btn_contacto_bot"><div class="icon-plus"> <label>Contacto</label></div></a></li>
+            <li><a href="#agenda" class="sin_r" id="btn_actividad_bot"><div class="icon-plus"> <label>Actividades</label></div></a></li>
+          </ul>
+      </div>
+    </article>
+  </section>
+
+  <section data-role="page" id="contactos">
+    <article data-role="header" id="d_usu" data-id="top_fijo" data-position="fixed" class="cab_nav">
+      <a href="#" data-rel="back" class="btn_back"><div class="icon-arrow-left atras_btn"></div><label>Atras</label></a>
+      <div class="con_cab_a"><h1>Actividades</h1></div>
+      <div data-role="navbar" data-grid="d" id="cont_cab_nav">
+        <ul>
+          <li><a href="javascript:;" id='btn_venta'><div class="icon-office"></div><label>VENTAS</label></a></li>
+          <li><a href="javascript:;" id='btn_actividad'><div class="icon-calendar"></div><label>ACTIVIDADES</label></a></li>
+          <li><a href="javascript:;" id='btn_contacto' style="border-bottom: 6px solid #490d1a; height: 44px;"><div class="icon-address-book"></div><label>CONTACTOS</label></a></li>
+          <li><a href="javascript:;" id='btn_estadistica'><div class="icon-pie"></div><label>ESTADISTICAS</label></a></li>
+          <li><a href="javascript:;" id='btn_logro'><div class="icon-star"></div><label>LOGROS</label></a></li>
+        </ul>
+      </div>
+    </article>
+    <article data-role="content" class="cont_main"> 
+      <section class='cont_items'>
+        <div id="wrapper">
+          <!-- <div class="scroller">-->
+          <article class="unid_cont_item_act_contac">
+            <section class="cont_item_contend_uni">
+              <section class="sec_cont_item_izq">
+                <div class="sec_cont_item_izq_ico">
+                  <div class="icon-office"></div>
+                </div>
+              </section>
+              <section class="sec_cont_item_mid">
+                <div class="sec_cont_item_izq_text">Empresa1 inc</div>
+              </section>
+              <section class="sec_cont_item_der">
+                <div class="sec_cont_item_izq_flecha">
+                  <div class="icon-plus"></div>
+                </div>
+              </section>
+            </section>
+
+            <section class="cont_item_contend_uni">
+              <section class="sec_cont_item_izq">
+                <div class="sec_cont_item_izq_ico">
+                  <div class="icon-office"></div>
+                </div>
+              </section>
+              <section class="sec_cont_item_mid">
+                <div class="sec_cont_item_izq_text">Empresa2 inc</div>
+              </section>
+              <section class="sec_cont_item_der">
+                <div class="sec_cont_item_izq_flecha">
+                  <div class="icon-plus"></div>
+                </div>
+              </section>
+            </section>
+
+            <section class="cont_item_contend_uni">
+              <section class="sec_cont_item_izq">
+                <div class="sec_cont_item_izq_ico">
+                  <div class="icon-office"></div>
+                </div>
+              </section>
+              <section class="sec_cont_item_mid">
+                <div class="sec_cont_item_izq_text">Empresa3 inc</div>
+              </section>
+              <section class="sec_cont_item_der">
+                <div class="sec_cont_item_izq_flecha">
+                  <div class="icon-plus"></div>
+                </div>
+              </section>
+            </section>
+          </article>
+          <!-- </div>-->
+        </div>
+      </section>
+    </article>
+     <article data-role="footer" data-position="fixed" data-id="pie_fijo" data-theme="b" class="pie">
+        <div data-role="navbar" data-grid="b" id="cont_pie_nav">
+          <ul>
+            <li><a href="#venta" id="btn_venta_bot"><div class="icon-plus"> <label>Venta</label></div></a></li>
+            <li><a href="#contacto" id="btn_contacto_bot"><div class="icon-plus"> <label>Contacto</label></div></a></li>
+            <li><a href="#agenda" class="sin_r" id="btn_agenda_bot"><div class="icon-plus"> <label>Agenda</label></div></a></li>
+          </ul>
+      </div>
+    </article>
+  </section>
+
+  <section data-role="page" id="contacto_ind">
+    <article data-role="header" id="d_usu" data-id="top_fijo" data-position="fixed" class="cab_nav">
+      <a href="#" data-rel="back" class="btn_back"><div class="icon-arrow-left atras_btn"></div><label>Atras</label></a>
+      <div class="con_cab_a"><h1>Contacto Individual</h1></div>
+      <div data-role="navbar" data-grid="d" id="cont_cab_nav">
+        <ul>
+          <li><a href="javascript:;" ><div class="icon-office"></div><label>VENTAS</label></a></li>
+          <li><a href="javascript:;" id='btn_actividad'><div class="icon-calendar"></div><label>ACTIVIDADES</label></a></li>
+          <li><a href="javascript:;" id='btn_contacto' style="border-bottom: 6px solid #490d1a; height: 44px;"><div class="icon-address-book"></div><label>CONTACTOS</label></a></li>
+          <li><a href="javascript:;"><div class="icon-pie"></div><label>ESTADISTICAS</label></a></li>
+          <li><a href="javascript:;"><div class="icon-star"></div><label>LOGROS</label></a></li>
+        </ul>
+      </div>
+    </article>
+    <article data-role="content" class="cont_main"> 
+      <section class='cont_items'>
+        <article class="fase_tit fase_tit_sel_act_ind">
+          <input type="checkbox" name="act" value="actividad" id="acti-select"/>
+          <input type="text" name="actnom" value="Objetivo" id="acti-select-nom"></input>
+          <div data-role="fieldcontain" class="fieldcontain-background">
+            <select name="cboFase" id="cboFase">
+              <option value="volvo">Ti<div class="icon-calendar"></div></option>
+              <option value="volvo">po <div class="icon-calendar"></div></option>
+              <option value="volvo">ti<div class="icon-calendar"></div></option>
+              <option value="volvo">Po<div class="icon-calendar"></div></option>
+            </select>
+          </div>
+        </article>
+        <section class='cont_item_lst'>
+          <div id="wrapper">
+          <!-- <div class="scroller">-->
+          <article class="unid_cont_item_act_uni">
+                <section class="sect_uno_item_izq_uni">
+                  <div class="div_fecha_act_top_uni"><div class="icon-calendar"></div></div>
+                  <!-- <div class="div_fecha_act_bot_uni">Ingresar Fecha</div> -->
+                  <input type="datetime" name="" value="" class="div_fecha_act_bot_uni" placeholder="Ingresar Fecha">
+                </section>
+                <section class="sect_uno_item_mid_uni">
+                 <div class="div_fecha_act_top_der_uni"><div class="icon-calendar"></div></div>
+                  <input type="text" name="" value="" class="div_fecha_act_bot_der_uni" placeholder="Hora">
+                </section>
+              </article>
+
+              <article class="unid_cont_item_act_uni">
+                <section class="sect_uno_item_all_uni">
+                  <div class="div_fecha_act_top_all_uni"><div class="icon-calendar"></div></div>
+                  <div class="div_fecha_act_mid_all_uni">Duración : </div>
+                  <input class="div_fecha_act_bot_all_uni" type="text" name="" value="5 minutos" placeholder="">
+                </section>
+              </article>
+
+              <article class="unid_cont_item_act_uni_sep">
+                <section></section>
+                <div>Asignado a</div>
+              </article>
+
+              <article class="fase_tit fase_tit_sel">
+                <div data-role="fieldcontain" class="fieldcontain-background">
+                  <select name="cboFase" id="cboFase">
+                    <option value="volvo">SELECCIONAR VENTA</option>
+                    <option value="volvo">GOOGLE inc</option>
+                    <option value="volvo">Yahoo corp</option>
+                    <option value="volvo">Volvo4</option>
+                  </select>
+                </div>
+              </article>
+              
+              <article class="unid_cont_item_act_uni_sep">
+                <section></section>
+              </article>
+
+              <article class="unid_cont_item_act_uni_textarea">
+                <section class="sect_uno_item_all_uni">
+                  <div class="div_fecha_act_top_all_uni"><div class="icon-calendar"></div></div>
+                  <textarea name="" class="div_textarea_act_mid_all_uni"  cols="20" placeholder="Agregar Nota"></textarea>
+                </section>
+              </article>
+
+              <article class="unid_cont_item_act_uni texto_alineado_der" >
+                <div class="white-button btn-marg-der">Cancelar</div>
+                <div class="color-button">Grabar</div>
+              </article>
+          <!-- </div> -->
+          </div>
+        </section>
+      </section>
+    </article>
+    <article data-role="footer" data-position="fixed" data-id="pie_fijo" data-theme="b" class="pie">
+        <div data-role="navbar" data-grid="b" id="cont_pie_nav">
+          <ul>
+            <li><a href="#venta" id="btn_venta_bot"><div class="icon-plus"> <label>Venta</label></div></a></li>
+            <li><a href="#contacto" id="btn_contacto_bot"><div class="icon-plus"> <label>Contacto</label></div></a></li>
+            <li><a href="#agenda" class="sin_r" id="btn_actividad_bot"><div class="icon-plus"> <label>Actividades</label></div></a></li>
+          </ul>
+      </div>
+    </article>
+  </section>
+
+  <section data-role="page" id="contacto_nuevo">
+    <article data-role="header" id="d_usu" data-id="top_fijo" data-position="fixed" class="cab_nav">
+      <a href="#" data-rel="back" class="btn_back"><div class="icon-arrow-left atras_btn"></div><label>Atras</label></a>
+      <div class="con_cab_a"><h1>Contacto Nuevo</h1></div>
+      <div data-role="navbar" data-grid="d" id="cont_cab_nav">
+        <ul>
+          <li><a href="javascript:;" id='btn_venta'><div class="icon-office"></div><label>VENTAS</label></a></li>
+          <li><a href="javascript:;" id='btn_actividad'><div class="icon-calendar"></div><label>ACTIVIDADES</label></a></li>
+          <li><a href="javascript:;" id='btn_contacto' style="border-bottom: 6px solid #490d1a; height: 44px;"><div class="icon-address-book"></div><label>CONTACTOS</label></a></li>
+          <li><a href="javascript:;"><div class="icon-pie"></div><label>ESTADISTICAS</label></a></li>
+          <li><a href="javascript:;"><div class="icon-star"></div><label>LOGROS</label></a></li>
+        </ul>
+      </div>
+    </article>
+    <article data-role="content" class="cont_main"> 
+      <section class='cont_items'>
+        <div id="wrapper">
+          <!-- <div class="scroller">-->
+          <article class="unid_cont_item_act_contac">
+
+            <section class="cont_item_contend_uni_nuevo">
+              <section class="sec_cont_item_izq_nuevo">
+                <div class="sec_cont_item_izq_ico_nuevo">
+                  <div class="icon-office"></div>
+                </div>
+              </section>
+              <section class="sec_cont_item_mid_nuevo">
+                <input type="text" class="sec_cont_item_izq_text_nuevo" value="Empresa"></input>
+              </section>
+            </section>
+            
+            <section class="cont_item_contend_uni_nuevo">
+              <section class="sec_cont_item_izq_nuevo">
+                <div class="sec_cont_item_izq_ico_nuevo">
+                  <div class="icon-office"></div>
+                </div>
+              </section>
+              <section class="sec_cont_item_mid_nuevo">
+                <input type="text" class="sec_cont_item_izq_text_nuevo" value="RUC"></input>
+              </section>
+            </section>
+
+            <section class="cont_item_contend_uni_nuevo">
+              <section class="sec_cont_item_izq_nuevo">
+                <div class="sec_cont_item_izq_ico_nuevo">
+                  <div class="icon-office"></div>
+                </div>
+              </section>
+              <section class="sec_cont_item_mid_nuevo">
+                <input type="text" class="sec_cont_item_izq_text_nuevo" value="Numero de Trabajadores"></input>
+              </section>
+            </section>
+
+            <section class="cont_item_contend_uni_nuevo">
+              <section class="sec_cont_item_izq_nuevo">
+                <div class="sec_cont_item_izq_ico_nuevo">
+                  <div class="icon-office"></div>
+                </div>
+              </section>
+              <section class="sec_cont_item_mid_nuevo">
+                <input type="text" class="sec_cont_item_izq_text_nuevo" value="Volumen de Venta"></input>
+              </section>
+            </section>
+
+            <section class="cont_item_contend_uni_nuevo">
+              <section class="sec_cont_item_izq_nuevo">
+                <div class="sec_cont_item_izq_ico_nuevo">
+                  <div class="icon-office"></div>
+                </div>
+              </section>
+              <section class="sec_cont_item_mid_nuevo">
+                <input type="text" class="sec_cont_item_izq_text_nuevo" value="Giro"></input>
+              </section>
+            </section>
+
+            <section class="cont_item_contend_uni_nuevo">
+              <section class="sec_cont_item_izq_nuevo">
+                <div class="sec_cont_item_izq_ico_nuevo">
+                  <div class="icon-office"></div>
+                </div>
+              </section>
+              <section class="sec_cont_item_mid_nuevo">
+                <input type="text" class="sec_cont_item_izq_text_nuevo" value="Dirección"></input>
+              </section>
+            </section>
+
+            <section class="cont_div_nuevo"></section>
+
+            <section class="cont_item_contend_btn_nuevo">
+              <div>Guardar</div>
+            </section>
+
+          </article>
+          <!-- </div>-->
+        </div>
+      </section>
+    </article>
+     <article data-role="footer" data-position="fixed" data-id="pie_fijo" data-theme="b" class="pie">
+        <div data-role="navbar" data-grid="b" id="cont_pie_nav">
+          <ul>
+            <li><a href="#venta" id="btn_venta_bot"><div class="icon-plus"> <label>Venta</label></div></a></li>
+            <li><a href="#contacto" id="btn_contacto_bot"><div class="icon-plus"> <label>Contacto</label></div></a></li>
+            <li><a href="#agenda" class="sin_r" id="btn_actividad_bot"><div class="icon-plus"> <label>Actividades</label></div></a></li>
+          </ul>
+      </div>
+    </article>
+  </section>
+
+  <section data-role="page" id="formulario_venta">
+    <article data-role="header" id="d_usu" data-id="top_fijo" data-position="fixed" class="cab_nav">
+      <a href="#" data-rel="back" class="btn_back"><div class="icon-arrow-left atras_btn"></div><label>Atras</label></a>
+      <div class="con_cab_a"><h1>Datos de la venta</h1></div>
+      <div data-role="navbar" data-grid="d" id="cont_cab_nav">
+        <ul>
+          <li><a href="javascript:;" style="border-bottom: 6px solid #490d1a; height: 44px;"><div class="icon-office"></div><label>VENTAS</label></a></li>
+          <li><a href="javascript:;" id='btn_actividad'><div class="icon-calendar"></div><label>ACTIVIDADES</label></a></li>
+          <li><a href="javascript:;" id='btn_contacto'><div class="icon-address-book"></div><label>CONTACTOS</label></a></li>
+          <li><a href="javascript:;"><div class="icon-pie"></div><label>ESTADISTICAS</label></a></li>
+          <li><a href="javascript:;"><div class="icon-star"></div><label>LOGROS</label></a></li>
+        </ul>
+      </div>
+    </article>
+    <article data-role="content" class="cont_main"> 
+      <section class='cont_items'>
+        <div id="wrapper">
+          <!-- <div class="scroller">-->
+            <section class="vent_ind_item_act">
+              <section class="vent_ind_item_porc"></section>
+
+              <section class="vent_div_nuevo">
+                <section class="vent_div_nuevo_cont">
+                  <div class="punto-text-big">30%</div>
+                </section>
+              </section>
+
+              <!-- <section class="vent_div_nuevo">
+                <section class="vent_div_nuevo_cont">
+                  <div id="punto-normal" class="punto-on"></div>
+                  <div class="punto-text-big">30%</div>
+                </section>
+                <section class="vent_div_nuevo_cont">
+                  <div id="punto-normal" class="punto-off"></div>
+                   <div class="punto-text-small">70%</div>
+                </section>
+                 <section class="vent_div_nuevo_cont">
+                  <div id="punto-normal" class="punto-off"></div>
+                   <div class="punto-text-small">100%</div>
+                </section>
+              </section>-->
+            </section>
+            
+            <section class="vent_ind_deta_btns">
+              <div class="white-button">PERDIDO</div>
+              <div class="color-button">GANADO</div>
+              <div class="edits-button"><div class="icon-pencil"></div></div>
+            </section>
+
+            <section class="vent_ind_det_fondo">
+
+              <section class="vent_ind_det_f_cont">
+                <section class="vent_ind_det_f_izq">
+                  <div class="vent_ind_det_izq_ico">
+                    <div class="icon-office"></div>
+                  </div>
+                </section>
+                <section class="vent_ind_det_f_der">
+                  <div class="vent_ind_der_top">Alfredo Arroyo Diaz</div>
+                  <div class="vent_ind_der_bot">ROINET S.A.C</div>
+                </section>
+              </section>
+
+              <section class="vent_ind_det_f_cont">
+                <section class="vent_ind_det_f_izq">
+                  <div class="vent_ind_det_izq_ico ico-margin">
+                    <div class="icon-office"></div>
+                  </div>
+                </section>
+                <section class="vent_ind_det_f_der">
+                  <div class="vent_ind_der_mid">15,000 <span>NUEVOS SOLES</span></div>
+                </section>
+              </section>
+
+              <section class="vent_ind_det_f_cont">
+                <section class="vent_ind_det_f_izq">
+                  <div class="vent_ind_det_izq_ico">
+                    <div class="icon-office"></div>
+                  </div>
+                </section>
+                <section class="vent_ind_det_f_der">
+                  <div class="vent_ind_der_top_color">Necesidad</div>
+                  <div class="vent_ind_der_bot_white">Nulla vitae elit libero, a pharetra augue. Aenean lacinia bibendum nulla sed consectetur.</div>
+                </section>
+              </section>
+
+              <section class="vent_ind_det_f_cont">
+                <section class="vent_ind_det_f_izq">
+                  <div class="vent_ind_det_izq_ico ico-margin">
+                    <div class="icon-calendar"></div>
+                  </div>
+                </section>
+                <section class="vent_ind_det_f_der">
+                  <div class="vent_ind_der_mid txt_sm">Mar, 16 Agosto</div>
+                </section>
+              </section>
+              
+              <section class="vent_ind_det_f_cont">
+                <section class="vent_ind_det_f_check">
+                  <input type="checkbox" name="detalleventa" value="Firma"/>
+                  <label>Firma</label>
+                </section>
+                <section class="vent_ind_det_f_check">
+                  <input type="checkbox" name="detalleventa" value="Pago"/>
+                  <label>Pago</label>
+                </section>
+                <section class="vent_ind_det_f_check">
+                  <input type="checkbox" name="detalleventa" value="Entrego"/>
+                  <label>Entrego</label>
+                </section>
+              </section>
+
+            </section>
+
+            <section class="vent_ind_deta_act">
+              <section class="vent_div_linea_act">
+                <div class="punto-text-big">Actividades</div>
+              </section>
+            </section>
+
+            <article class="unid_cont_item_act">
+                <section class="sect_uno_item_izq">
+                  <div class="div_fecha_act_top">Vie</div>
+                  <div class="div_fecha_act_bot">30 Ago</div>
+                </section>
+                <section class="sect_uno_item_mid">
+                  <div class="div_tipo_act_top">Reunión</div>
+                  <div class="div_tipo_act_bot">
+                    <div class="div_tipo_act_bot_izq">13:00 /</div>
+                    <div class="div_tipo_act_bot_der">Teléfonica del Perú</div>
+                  </div>
+                </section>
+                <section class="sect_uno_item_der"><div class="ui-checkbox"><input type="checkbox" name="act" value="actividad"></div></section>
+              </article>
+          </div>
+        </div>
+      </section>
+    </article>
+     <article data-role="footer" data-position="fixed" data-id="pie_fijo" data-theme="b" class="pie">
+        <div data-role="navbar" data-grid="b" id="cont_pie_nav">
+          <ul>
+            <li><a href="#venta" id="btn_venta_bot"><div class="icon-plus"> <label>Venta</label></div></a></li>
+            <li><a href="#contacto" id="btn_contacto_bot"><div class="icon-plus"> <label>Contacto</label></div></a></li>
+            <li><a href="#agenda" class="sin_r" id="btn_actividad_bot"><div class="icon-plus"> <label>Actividades</label></div></a></li>
+          </ul>
+      </div>
+    </article>
+  </section>
+
+  <section data-role="page" id="actividad_venta_ind">
+    <article data-role="header" id="d_usu" data-id="top_fijo" data-position="fixed" class="cab_nav">
+      <a href="#" data-rel="back" class="btn_back"><div class="icon-arrow-left atras_btn"></div><label>Atras</label></a>
+      <div class="con_cab_a"><h1>Actividad Detalle</h1></div>
+      <div data-role="navbar" data-grid="d" id="cont_cab_nav">
+        <ul>
+          <li><a href="javascript:;" style="border-bottom: 6px solid #490d1a; height: 44px;"><div class="icon-office"></div><label>VENTAS</label></a></li>
+          <li><a href="javascript:;" id='btn_actividad'><div class="icon-calendar"></div><label>ACTIVIDADES</label></a></li>
+          <li><a href="javascript:;" id='btn_contacto'><div class="icon-address-book"></div><label>CONTACTOS</label></a></li>
+          <li><a href="javascript:;"><div class="icon-pie"></div><label>ESTADISTICAS</label></a></li>
+          <li><a href="javascript:;"><div class="icon-star"></div><label>LOGROS</label></a></li>
+        </ul>
+      </div>
+    </article>
+    <article data-role="content" class="cont_main"> 
+      <section class='cont_items'>
+        <article class="fase_tit fase_tit_sel_act_ind">
+          <input type="checkbox" name="act" value="actividad" id="acti-select"/>
+          <input type="text" name="actnom" value="Objetivo" id="acti-select-nom"></input>
+          <div data-role="fieldcontain" class="fieldcontain-background">
+            <select name="cboFase" id="cboFase">
+              <option value="volvo">Ti<div class="icon-calendar"></div></option>
+              <option value="volvo">po <div class="icon-calendar"></div></option>
+              <option value="volvo">ti<div class="icon-calendar"></div></option>
+              <option value="volvo">Po<div class="icon-calendar"></div></option>
+            </select>
+          </div>
+        </article>
+        <section class='cont_item_lst'>
+          <div id="wrapper">
+          <!-- <div class="scroller">-->
+          <article class="unid_cont_item_act_uni">
+                <section class="sect_uno_item_izq_uni">
+                  <div class="div_fecha_act_top_uni"><div class="icon-calendar"></div></div>
+                  <!-- <div class="div_fecha_act_bot_uni">Ingresar Fecha</div> -->
+                  <input type="datetime" name="" value="" class="div_fecha_act_bot_uni" placeholder="Ingresar Fecha">
+                </section>
+                <section class="sect_uno_item_mid_uni">
+                 <div class="div_fecha_act_top_der_uni"><div class="icon-calendar"></div></div>
+                  <input type="text" name="" value="" class="div_fecha_act_bot_der_uni" placeholder="Hora">
+                </section>
+              </article>
+
+              <article class="unid_cont_item_act_uni">
+                <section class="sect_uno_item_all_uni">
+                  <div class="div_fecha_act_top_all_uni"><div class="icon-calendar"></div></div>
+                  <div class="div_fecha_act_mid_all_uni">Duración : </div>
+                  <input class="div_fecha_act_bot_all_uni" type="text" name="" value="5 minutos" placeholder="">
+                </section>
+              </article>
+
+              <article class="unid_cont_item_act_uni_sep">
+                <section></section>
+                <div>Asignado a</div>
+              </article>
+
+              <article class="fase_tit fase_tit_sel">
+                <div data-role="fieldcontain" class="fieldcontain-background">
+                  <select name="cboFase" id="cboFase">
+                    <option value="volvo">SELECCIONAR VENTA</option>
+                    <option value="volvo">GOOGLE inc</option>
+                    <option value="volvo">Yahoo corp</option>
+                    <option value="volvo">Volvo4</option>
+                  </select>
+                </div>
+              </article>
+              
+              <article class="unid_cont_item_act_uni_sep">
+                <section></section>
+              </article>
+
+              <article class="unid_cont_item_act_uni_textarea">
+                <section class="sect_uno_item_all_uni">
+                  <div class="div_fecha_act_top_all_uni"><div class="icon-calendar"></div></div>
+                  <textarea name="" class="div_textarea_act_mid_all_uni"  cols="20" placeholder="Agregar Nota"></textarea>
+                </section>
+              </article>
+
+              <article class="unid_cont_item_act_uni texto_alineado_der" >
+                <div class="white-button btn-marg-der">Cancelar</div>
+                <div class="color-button">Grabar</div>
+              </article>
+          <!-- </div> -->
+          </div>
+        </section>
+      </section>
+    </article>
+    <article data-role="footer" data-position="fixed" data-id="pie_fijo" data-theme="b" class="pie">
+        <div data-role="navbar" data-grid="b" id="cont_pie_nav">
+          <ul>
+            <li><a href="#venta" id="btn_venta_bot"><div class="icon-plus"> <label>Venta</label></div></a></li>
+            <li><a href="#contacto" id="btn_contacto_bot"><div class="icon-plus"> <label>Contacto</label></div></a></li>
+            <li><a href="#agenda" class="sin_r" id="btn_actividad_bot"><div class="icon-plus"> <label>Actividades</label></div></a></li>
+          </ul>
+      </div>
+    </article>
+  </section>
+
+  <section data-role="page" id="actividad_nuevo">
+    <article data-role="header" id="d_usu" data-id="top_fijo" data-position="fixed" class="cab_nav">
+      <a href="#" data-rel="back" class="btn_back"><div class="icon-arrow-left atras_btn"></div><label>Atras</label></a>
+      <div class="con_cab_a"><h1>Actividad Nueva</h1></div>
+      <div data-role="navbar" data-grid="d" id="cont_cab_nav">
+        <ul>
+          <li><a href="javascript:;" style="border-bottom: 6px solid #490d1a; height: 44px;"><div class="icon-office"></div><label>VENTAS</label></a></li>
+          <li><a href="javascript:;" id='btn_actividad'><div class="icon-calendar"></div><label>ACTIVIDADES</label></a></li>
+          <li><a href="javascript:;" id='btn_contacto'><div class="icon-address-book"></div><label>CONTACTOS</label></a></li>
+          <li><a href="javascript:;"><div class="icon-pie"></div><label>ESTADISTICAS</label></a></li>
+          <li><a href="javascript:;"><div class="icon-star"></div><label>LOGROS</label></a></li>
+        </ul>
+      </div>
+    </article>
+    <article data-role="content" class="cont_main"> 
+      <section class='cont_items'>
+        <article class="fase_tit fase_tit_sel_act_ind_nuevo">
+          <input type="text" name="actnom" value="Objetivo" id="acti-select-nom"></input>
+          <div data-role="fieldcontain" class="fieldcontain-background">
+            <select name="cboFase" id="cboFase">
+              <option value="volvo">Ti</option>
+              <option value="volvo">po</option>
+              <option value="volvo">ti</option>
+              <option value="volvo">Po</option>
+            </select>
+          </div>
+        </article>
+        <section class='cont_item_lst'>
+          <div id="wrapper">
+          <!-- <div class="scroller">-->
+          <article class="unid_cont_item_act_uni">
+                <section class="sect_uno_item_izq_uni">
+                  <div class="div_fecha_act_top_uni"><div class="icon-calendar"></div></div>
+                  <!-- <div class="div_fecha_act_bot_uni">Ingresar Fecha</div> -->
+                  <input type="datetime" name="" value="" class="div_fecha_act_bot_uni" placeholder="Ingresar Fecha">
+                </section>
+                <section class="sect_uno_item_mid_uni">
+                 <div class="div_fecha_act_top_der_uni"><div class="icon-calendar"></div></div>
+                  <input type="text" name="" value="" class="div_fecha_act_bot_der_uni" placeholder="Hora">
+                </section>
+              </article>
+
+              <article class="unid_cont_item_act_uni">
+                <section class="sect_uno_item_all_uni">
+                  <div class="div_fecha_act_top_all_uni"><div class="icon-calendar"></div></div>
+                  <div class="div_fecha_act_mid_all_uni">Duración : </div>
+                  <input class="div_fecha_act_bot_all_uni" type="text" name="" value="5 minutos" placeholder="">
+                </section>
+              </article>
+
+              <article class="unid_cont_item_act_uni_sep">
+                <section></section>
+                <div>Asignado a</div>
+              </article>
+
+              <article class="fase_tit fase_tit_sel">
+                <div data-role="fieldcontain" class="fieldcontain-background">
+                  <select name="cboFase" id="cboFase">
+                    <option value="volvo">SELECCIONAR VENTA</option>
+                    <option value="volvo">GOOGLE inc</option>
+                    <option value="volvo">Yahoo corp</option>
+                    <option value="volvo">Volvo4</option>
+                  </select>
+                </div>
+              </article>
+              
+              <article class="unid_cont_item_act_uni_sep">
+                <section></section>
+              </article>
+
+              <article class="unid_cont_item_act_uni_textarea">
+                <section class="sect_uno_item_all_uni">
+                  <div class="div_fecha_act_top_all_uni"><div class="icon-calendar"></div></div>
+                  <textarea name="" class="div_textarea_act_mid_all_uni"  cols="20" placeholder="Agregar Nota"></textarea>
+                </section>
+              </article>
+
+              <article class="unid_cont_item_act_uni texto_alineado_der" >
+                <div class="white-button btn-marg-der">Cancelar</div>
+                <div class="color-button">Grabar</div>
+              </article>
+          <!-- </div> -->
+          </div>
+        </section>
+      </section>
+    </article>
+    <article data-role="footer" data-position="fixed" data-id="pie_fijo" data-theme="b" class="pie">
+        <div data-role="navbar" data-grid="b" id="cont_pie_nav">
+          <ul>
+            <li><a href="#venta" id="btn_venta_bot"><div class="icon-plus"> <label>Venta</label></div></a></li>
+            <li><a href="#contacto" id="btn_contacto_bot"><div class="icon-plus"> <label>Contacto</label></div></a></li>
+            <li><a href="#agenda" class="sin_r" id="btn_actividad_bot"><div class="icon-plus"> <label>Actividades</label></div></a></li>
+          </ul>
+      </div>
+    </article>
+  </section>
+</body>
+</html>
