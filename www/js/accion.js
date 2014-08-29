@@ -183,16 +183,56 @@ $(document).ready(function () {
 		$.mobile.changePage("#actividad", {transition:"slide"});
 	});
 
-	$("body").on('click', '#btn_contacto', function(e){
-		$.mobile.changePage("#contactos", {transition:"slide"});
+	$("body").on('click', '#cont_cab_nav ul li', function(e){
+		var id = this.id;
+
+		if(id){
+
+			var id2 = $("#"+id+" .sub-menu-nn");
+
+			if(id2.hasClass('ocultar')){
+				id2.removeClass('ocultar');	
+			}else{
+				id2.addClass('ocultar');	
+			}
+
+			
+		}else{
+			$(".sub-menu-nn").addClass('ocultar');
+		}
+		console.log($(this).attr('id')+" hehe "+ this.id);
 	});
 
+		$("body").on('click', '#btn_empresa', function(e){
+			$.mobile.changePage("#contactos-empresa", {transition:"slide"});
+		});
+
+			$("body").on("click",".cont_item_contend_uni_emp", function(e){
+				$.mobile.changePage("#contacto_deta_empresa", {transition:"slidedown"});
+			});
+
+		$("body").on('click', '#btn_persona', function(e){
+			$.mobile.changePage("#contactos-persona", {transition:"slide"});
+		});
+
+			$("body").on("click",".cont_item_contend_uni_per", function(e){
+				$.mobile.changePage("#contacto_deta_persona", {transition:"slidedown"});
+			});
+
 	$("body").on('click', '#btn_contacto_bot', function(e){
-		$.mobile.changePage("#contacto_nuevo", {transition:"slide"});
+		$.mobile.changePage("#contacto_nuevo_editar", {transition:"slide"});
 	});
 
 	$("body").on('click', '#btn_actividad_bot', function(e){
 		$.mobile.changePage("#actividad_nuevo", {transition:"slide"});
+	});
+
+	$("body").on('click', '#text-big-add-deci', function(e){
+		$.mobile.changePage("#contacto_nuevo_decisor", {transition:"slide"});
+	});
+
+	$("body").on('click', '#cont_ind_deta_blank_der', function(e){
+		$.mobile.changePage("#contacto_nuevo_editar", {transition:"slide"});
 	});
 
 	// 
@@ -225,10 +265,6 @@ $(document).ready(function () {
 		$.mobile.changePage("#actividad_venta_ind", {transition:"slidedown"});
 	});
 
-	$("body").on("click",".cont_item_contend_uni", function(e){
-		$.mobile.changePage("#contacto_ind", {transition:"slidedown"});
-	});
-	
 	//OFFLINE
 	function mostrarDataOffline()
 	{
