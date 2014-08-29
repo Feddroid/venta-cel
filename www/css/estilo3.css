@@ -881,21 +881,14 @@ textarea {
 }
 
 .cont_ind_det_f_izq {
-	display: inline-block;
-	width: 20%;
-	height: 100%;
-	vertical-align: top;
-	text-align: center;
-	line-height: 1.2rem;
+	vertical-align: middle;
 	color: #DF2047;
+	padding-left: 20px;
+	padding-right: 20px;
 }
 
 .cont_ind_det_f_der {
-	display: inline-block;
-	width: 75%;
-	margin-right: 5%;
-	height: 100%;
-	vertical-align: top;
+	width: 100%;
 	text-align: left;
 	font-family: ProximaNovaLight, sans-serif;
 	padding-top: 4%;
@@ -915,7 +908,7 @@ textarea {
 
 .cont_ind_det_izq_ico{
 	color: #DF2047;
-	margin: 12px 0 0 0;
+	margin: 0;
 }
 
 .cont_ind_det_fondo .cont_ind_det_f_conta:last-child .cont_ind_det_f_der{
@@ -988,8 +981,12 @@ textarea {
 	display: none !important; 
 }
 
-.cont_ind_deta_blank > section{
+.cont_ind_deta_blank > section, .cont_ind_det_f_conta > section{
 	display: table-cell !important;
+}
+
+.cont_ind_det_f_conta{
+	padding-right: 20px;
 }
 
 @media (max-width:320px){
