@@ -43,6 +43,15 @@ textarea {
 	margin-top: 10px;
 }
 
+.unid_cont_item_act_contac .cont_item_contend_uni_emp:last-child{
+	padding-bottom: 5px;
+}
+
+.cont_item_contend_uni_emp:last-child .sec_cont_item_mid, .cont_item_contend_uni_emp:last-child .sec_cont_item_der,
+.cont_item_contend_uni_per:last-child .sec_cont_item_mid, .cont_item_contend_uni_per:last-child .sec_cont_item_der{
+	border-bottom: none;
+}
+
 .unid_cont_item_act_uni {
 	display: inline-block;
 	font-family: ProximaNovaLight, sans-serif;
@@ -95,14 +104,9 @@ textarea {
 
 .sec_cont_item_izq {
 	display: inline-block;
-	width: 20%;
-	height: 100%;
-	vertical-align: top;
+	padding: 0 20px;
+	vertical-align: middle;
 	font-family: ProximaNovaLight, sans-serif;
-	text-align: center;
-	margin-right: -1px;
-	line-height: 1.2rem;
-	color: #DF2047;
 }
 
 .sect_uno_item_izq_uni {
@@ -151,11 +155,10 @@ textarea {
 .sec_cont_item_mid{
 	border-bottom: 1px solid #DDD;
 	display: inline-block;
-	width: 70%;
-	height: 100%;
-	vertical-align: top;
+	width: 100%;
 	font-family: ProximaNovaLight, sans-serif;
 	text-align: left;
+	padding: 15px 0;
 }
 
 .sect_uno_item_mid_uni{
@@ -182,7 +185,7 @@ textarea {
 	display: inline-block;
 	width: 10%;
 	height: 100%;
-	vertical-align: top;
+	vertical-align: middle;
 	font-family: ProximaNovaLight, sans-serif;
 	text-align: left;
 	border-bottom: 1px solid #DDD;
@@ -208,7 +211,7 @@ textarea {
 	vertical-align: top;
 }
 
-.sec_cont_item_izq_ico {
+/*.sec_cont_item_izq_ico {
 	background: #df2047;
 	display: inline-block;
 	width: 30%;
@@ -220,7 +223,7 @@ textarea {
 	border-radius: 20px;
 	color: #FFF;
 	text-shadow: none;
-}
+}*/
 
 .div_fecha_act_bot_uni{
 	display: inline-block;
@@ -457,7 +460,6 @@ textarea {
 .sec_cont_item_izq_text {
 	color: #313131; 
 	font-size: 18px;
-	padding-top: 20px;
 	padding-right: 10px;
 }
 
@@ -465,11 +467,12 @@ textarea {
 	display: inline-block;
 	color: #DF2047;
 	font-size: 18px;
-	margin-top: 20px;
 }
 
 .cont_item_contend_uni_emp, .cont_item_contend_uni_per{
-	height: 60px;
+	/*height: 60px;*/
+	padding: 5px 20px 0 0;
+	text-shadow: none;
 }
 
 .fase_tit_sel_act_ind_nuevo { 
@@ -820,7 +823,7 @@ textarea {
 	border-bottom: 1px solid #c7c7c7;
 }
 
-#cont_ind_deta_blank_der {
+#cont_deta_emp_blank_der , #cont_deta_per_blank_der{
 	display: inline-block;
 	width: 15%;
 	height: 100%;
@@ -829,7 +832,7 @@ textarea {
 	/*float: right;*/
 }
 
-#cont_ind_deta_blank_der div{
+#cont_deta_emp_blank_der div, #cont_deta_per_blank_der div{
 	color: #FFF;
 	font-size: 15px;
 	text-shadow: none;
@@ -891,8 +894,7 @@ textarea {
 	width: 100%;
 	text-align: left;
 	font-family: ProximaNovaLight, sans-serif;
-	padding-top: 4%;
-	padding-bottom: 4%;
+	padding: 10px 0;
 	border-bottom: 1px solid #DDD;
 }
 
@@ -934,7 +936,7 @@ textarea {
 	text-align: left;
 }
 
-.cont_ind_det_izq_ico .ico-usr{
+.cont_ind_det_izq_ico .ico-usr, .sec_cont_item_izq_ico .ico-usr{
 	color: #FFF;
 	font-size: 15px;
 	text-shadow: none;
@@ -944,6 +946,8 @@ textarea {
 	border-radius: 50%;
 	background: #DF2047;
 	line-height: 2.3rem;
+	/* padding: 0 10px; */
+	margin: 0 -10px;
 }
 
 .ico-usr:parent{
@@ -981,7 +985,7 @@ textarea {
 	display: none !important; 
 }
 
-.cont_ind_deta_blank > section, .cont_ind_det_f_conta > section{
+.cont_ind_deta_blank > section, .cont_ind_det_f_conta > section, .cont_item_contend_uni_emp > section, .cont_item_contend_uni_per > section{
 	display: table-cell !important;
 }
 

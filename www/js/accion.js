@@ -187,7 +187,6 @@ $(document).ready(function () {
 		var id = this.id;
 
 		if(id){
-
 			var id2 = $("#"+id+" .sub-menu-nn");
 
 			if(id2.hasClass('ocultar')){
@@ -196,11 +195,15 @@ $(document).ready(function () {
 				id2.addClass('ocultar');	
 			}
 
-			
 		}else{
 			$(".sub-menu-nn").addClass('ocultar');
 		}
-		console.log($(this).attr('id')+" hehe "+ this.id);
+		/*console.log($(this).attr('id')+" hehe "+ this.id);*/
+	});
+
+	$("body").on('click', '#btn_contacto_bot', function(e){
+		console.log("QQQ");
+		/*$.mobile.changePage("#contacto_emp_nuevo_editar", {transition:"slide"});*/
 	});
 
 		$("body").on('click', '#btn_empresa', function(e){
@@ -219,8 +222,12 @@ $(document).ready(function () {
 				$.mobile.changePage("#contacto_deta_persona", {transition:"slidedown"});
 			});
 
-	$("body").on('click', '#btn_contacto_bot', function(e){
-		$.mobile.changePage("#contacto_nuevo_editar", {transition:"slide"});
+	$("body").on('click', '#cont_deta_emp_blank_der', function(e){
+		$.mobile.changePage("#contacto_emp_nuevo_editar", {transition:"slide"});
+	});
+
+	$("body").on('click', '#cont_deta_per_blank_der', function(e){
+		$.mobile.changePage("#contacto_per_nuevo_editar", {transition:"slide"});
 	});
 
 	$("body").on('click', '#btn_actividad_bot', function(e){
@@ -231,9 +238,9 @@ $(document).ready(function () {
 		$.mobile.changePage("#contacto_nuevo_decisor", {transition:"slide"});
 	});
 
-	$("body").on('click', '#cont_ind_deta_blank_der', function(e){
+	/*$("body").on('click', '#cont_ind_deta_blank_der', function(e){
 		$.mobile.changePage("#contacto_nuevo_editar", {transition:"slide"});
-	});
+	});*/
 
 	// 
 
