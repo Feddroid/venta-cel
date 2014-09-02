@@ -981,7 +981,7 @@ textarea {
 	word-break: break-all;
 }
 
-.ocultar{
+.ocultar, .ocultar-bot{
 	display: none !important; 
 }
 
@@ -992,7 +992,11 @@ textarea {
 .cont_ind_det_f_conta{
 	padding-right: 20px;
 }
-
+ 
+#cont_pie_nav>ul>li>ul {  
+    bottom:100%; 
+}
+ 
 @media (max-width:320px){
 	#cont_ind_deta_blank_der{
 		/*margin-top: 12px;*/

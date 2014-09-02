@@ -183,11 +183,29 @@ $(document).ready(function () {
 		$.mobile.changePage("#actividad", {transition:"slide"});
 	});
 
-	$("body").on('click', '#cont_cab_nav ul li', function(e){
+	$("body").on('click', '#cont_cab_nav ul li, #cont_pie_nav ul li', function(e){
 		var id = this.id;
-
-		if(id){
+		var res = id.split("_");
+ 			 console.log(id ); 
+	    if(id){
 			var id2 = $("#"+id+" .sub-menu-nn");
+
+			if (res[4]){
+				//console.log(id+" SI");
+				//console.log(res[4]); 
+			 	 
+				var mnos = "_bot";
+ 				var evtd = id.replace(mnos,''); // myString.replace(avoid,'');  
+
+				$("#"+evtd+" .sub-menu-nn").addClass('ocultar');
+				console.log(id+" SIN Cambio!");
+				console.log(evtd+" CON Cambio!");
+
+			}else{
+				console.log(id+"_bot" +"  NO");
+				//console.log(res[4]); 
+				$("#"+id+"_bot .sub-menu-nn").addClass('ocultar');
+			}
 
 			if(id2.hasClass('ocultar')){
 				id2.removeClass('ocultar');	
@@ -200,12 +218,7 @@ $(document).ready(function () {
 		}
 		/*console.log($(this).attr('id')+" hehe "+ this.id);*/
 	});
-
-	$("body").on('click', '#btn_contacto_bot', function(e){
-		console.log("QQQ");
-		/*$.mobile.changePage("#contacto_emp_nuevo_editar", {transition:"slide"});*/
-	});
-
+ 
 		$("body").on('click', '#btn_empresa', function(e){
 			$.mobile.changePage("#contactos-empresa", {transition:"slide"});
 		});
